@@ -1,7 +1,4 @@
-﻿using Devices.Application.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Devices.Domain.Enums;
 
 namespace Devices.Application.DTOs;
 

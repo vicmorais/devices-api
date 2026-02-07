@@ -1,6 +1,6 @@
-﻿using Devices.Application.Enums;
+﻿using Devices.Domain.Enums;
 
-namespace Devices.Infrastructure.Entities;
+namespace Devices.Domain.Entities;
 
 public class Device : BaseEntity
 {

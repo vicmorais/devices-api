@@ -1,4 +1,4 @@
-﻿using Devices.Application.Enums;
+﻿using Devices.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;

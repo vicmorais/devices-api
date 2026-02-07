@@ -1,11 +1,7 @@
 ﻿using Devices.Application.DTOs;
-using Devices.Infrastructure.Entities;
-using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using System.Text;
+using Devices.Domain.Entities;
 
-namespace Devices.Infrastructure.Mappings;
+namespace Devices.Application.Mappings;
 public static class DeviceMappingExtensions
 {
     public static Device ToEntity(this CreateDeviceDto dto)

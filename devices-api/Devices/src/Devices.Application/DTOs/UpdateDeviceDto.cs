@@ -1,4 +1,4 @@
-﻿using Devices.Application.Enums;
+﻿using Devices.Domain.Enums;
 
 namespace Devices.Application.DTOs;
 

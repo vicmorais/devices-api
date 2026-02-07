@@ -1,4 +1,4 @@
-﻿namespace Devices.Application.Enums;
+﻿namespace Devices.Domain.Enums;
 
 public enum DeviceState
 {

@@ -1,4 +1,4 @@
-﻿using Devices.Infrastructure.Entities;
+﻿using Devices.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Devices.Infrastructure.Persistence;
