@@ -1,9 +1,10 @@
-﻿using Devices.Domain.Entities;
+﻿using Devices.Application.Interfaces;
+using Devices.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Devices.Infrastructure.Persistence;
 
-public class DevicesDbContext : DbContext
+public class DevicesDbContext : DbContext, IDevicesDbContext
 {
     public DevicesDbContext(DbContextOptions<DevicesDbContext> options) : base(options) { }
 
