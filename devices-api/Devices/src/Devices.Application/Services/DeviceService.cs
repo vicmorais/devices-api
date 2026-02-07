@@ -57,6 +57,12 @@ public class DeviceService:IDeviceService
 
     public async Task<PagedResult<DeviceDto>> GetAllAsync(string? brand, string? state, int page, int pageSize, CancellationToken cancellationToken = default)
     {
+        if(page < 1 || pageSize < 1)
+        {
+            throw new ArgumentException("Page and PageSize must be greater than 0");
+        }
+
+
         _logger.LogDebug(
             "Fetching devices - Brand: {Brand}, State: {State}, Page: {Page}, PageSize: {PageSize}",
             brand ?? "all", state ?? "all", page, pageSize);

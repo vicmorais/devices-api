@@ -1,3 +1,5 @@
+using Devices.Application.Interfaces;
+using Devices.Application.Services;
 using Devices.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,6 +12,8 @@ builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<DevicesDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<IDeviceService,DeviceService>();
 
 var app = builder.Build();
 
