@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Devices.API/Devices.API.csproj" Id="f779be8d-bca1-43b0-aa31-346a36189127" />
+    <Project Path="src/Devices.Application/Devices.Application.csproj" Id="97f3042f-f585-4599-9704-b9023f2f4104" />
+    <Project Path="src/Devices.Infrastructure/Devices.Infrastructure.csproj" Id="b1dd3c45-9fee-474d-a5d2-9bdd230c7d5b" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
