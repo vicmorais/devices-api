@@ -1,7 +1,9 @@
 using Asp.Versioning;
+using Devices.Api.Middleware;
 using Devices.Application.Interfaces;
 using Devices.Application.Services;
 using Devices.Infrastructure.Persistence;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -39,6 +41,13 @@ builder.Services.AddScoped<IDevicesDbContext>(provider =>
 
 // Application services
 builder.Services.AddScoped<IDeviceService, DeviceService>();
+
+// FluentValidation - auto-register all validators from Application assembly
+builder.Services.AddValidatorsFromAssemblyContaining<Devices.Application.Validators.CreateDeviceValidator>();
+
+// Global exception handling
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
 
 var app = builder.Build();
 
