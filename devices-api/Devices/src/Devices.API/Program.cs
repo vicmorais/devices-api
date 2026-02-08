@@ -74,6 +74,8 @@ using(var scope = app.Services.CreateScope())
 // Middleware Pipeline
 // ============================================
 
+app.UseExceptionHandler();
+
 // OpenAPI and Swagger UI (development only)
 if(app.Environment.IsDevelopment())
 {

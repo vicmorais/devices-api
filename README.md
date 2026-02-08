@@ -1,6 +1,6 @@
 ﻿# Devices API
 
-A production-ready RESTful API built with **.NET 10** and **C# 13** for managing device resources.  
+A production-ready RESTful API built with **.NET 10** and **C# 14** for managing device resources.  
 This project follows Clean Architecture principles and implements domain-driven design practices to ensure maintainability, scalability, and testability.
 
 ---
@@ -33,13 +33,12 @@ The solution follows a **Clean (Layered) Architecture** approach with clear sepa
 - Data persistence layer
 - Entity Framework Core configuration
 - PostgreSQL integration
-- Repository implementations
 
 ---
 
 ## 🛠 Technologies
 
-- **Runtime:** .NET 10 & C# 13  
+- **Runtime:** .NET 10 & C# 14  
 - **Database:** PostgreSQL 17  
 - **ORM:** Entity Framework Core  
 - **Validation:** FluentValidation  
