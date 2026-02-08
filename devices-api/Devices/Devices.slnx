@@ -13,5 +13,7 @@
     <Project Path="src/Devices.Domain/Devices.Domain.csproj" />
     <Project Path="src/Devices.Infrastructure/Devices.Infrastructure.csproj" Id="b1dd3c45-9fee-474d-a5d2-9bdd230c7d5b" />
   </Folder>
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="tests/Devices.UnitTests/Devices.UnitTests.csproj" Id="04fd8681-fd3d-43d7-ae30-5eef45065fe8" />
+  </Folder>
 </Solution>

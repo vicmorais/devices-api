@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Devices.Application.Services;
 
-public class DeviceService: IDeviceService
+public class DeviceService : IDeviceService
 {
     private readonly IDevicesDbContext _context;
 
