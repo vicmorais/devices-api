@@ -13,7 +13,11 @@ var builder = WebApplication.CreateBuilder(args);
 // ============================================
 
 // MVC Controllers
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+    });
 
 // OpenAPI document generation (built-in .NET 10)
 builder.Services.AddOpenApi();
@@ -50,6 +54,21 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
 var app = builder.Build();
+
+// ============================================
+// Migrations
+// ============================================
+
+using(var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<DevicesDbContext>();
+    var pendingMigrations = await dbContext.Database.GetPendingMigrationsAsync();
+
+    if(pendingMigrations.Any())
+    {
+        await dbContext.Database.MigrateAsync();
+    }
+}
 
 // ============================================
 // Middleware Pipeline

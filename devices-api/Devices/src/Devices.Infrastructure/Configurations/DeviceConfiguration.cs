@@ -29,5 +29,7 @@ public class DeviceConfiguration:IEntityTypeConfiguration<Device>
         builder.Property(d => d.LastUpdateTime)
             .IsRequired();
 
+        builder.HasIndex(d => new { d.Name, d.Brand }).IsUnique();
+
     }
 }

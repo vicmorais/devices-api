@@ -1,4 +1,12 @@
 <Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".dockerignore" />
+    <File Path=".env" />
+    <File Path=".env.example" />
+    <File Path="docker-compose.yml" />
+    <File Path="Dockerfile" />
+    <File Path="nuget.config" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/Devices.API/Devices.API.csproj" Id="f779be8d-bca1-43b0-aa31-346a36189127" />
     <Project Path="src/Devices.Application/Devices.Application.csproj" Id="97f3042f-f585-4599-9704-b9023f2f4104" />

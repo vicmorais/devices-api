@@ -134,8 +134,7 @@ public class DeviceService: IDeviceService
 
         await ValidationBehaviour.ValidateAndThrowAsync(_patchValidator, dto, cancellationToken);
 
-        var device = await _context.Devices.FindAsync([id], cancellationToken)
-            ?? throw new DeviceNotFoundException(id);
+        var device = await _context.Devices.FindAsync([id], cancellationToken) ?? throw new DeviceNotFoundException(id);
 
         if(device.State == DeviceState.InUse)
         {
